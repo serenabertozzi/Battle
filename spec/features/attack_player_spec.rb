@@ -4,4 +4,11 @@ feature "Attack player" do
     click_link ("Attack")
     expect(page).to have_content("Max attacked Serena")
   end
+
+  scenario "player 1 attack reduces player 2 HP" do
+    sign_in_and_play
+    click_link ("Attack")
+  
+    expect(page).to have_content("Max HP: 100 Serena HP: 90")
+  end
 end
