@@ -23,4 +23,17 @@ describe Game do
       expect(game.player_2).to eq(serena)
     end
   end
+
+  describe "#current_turn" do
+    it "displays the current turn" do
+      expect(game.current_turn).to eq(max)
+    end
+  end
+
+  describe "#change_turn" do
+    it "changes the current turn" do
+      game.change_turn
+      expect(game.current_turn).to eq(serena)
+    end
+  end
 end
