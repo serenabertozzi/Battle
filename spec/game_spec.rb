@@ -35,5 +35,15 @@ describe Game do
       game.change_turn
       expect(game.current_turn).to eq(serena)
     end
+    it "changes the current defendant" do
+      game.change_turn
+      expect(game.is_defending).to eq(max)
+    end
+  end
+
+  describe "#is_defending" do
+    it "is the player receiving the attack" do
+      expect(game.is_defending).to eq(serena)
+    end
   end
 end

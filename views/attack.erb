@@ -1,4 +1,4 @@
-<%= @game.player_1.name %> attacked <%= @game.player_2.name %> 
+<%= @game.is_defending.name %> attacked <%= @game.current_turn.name %> 
 <br>
 <%= @game.player_1.name %> HP: <%= @game.player_1.hp %> 
 <br>
@@ -7,4 +7,3 @@
 <%= @game.current_turn.name %>'s turn
 <br>
 <a href="/attack"> Attack</a>
-
