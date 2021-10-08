@@ -46,4 +46,14 @@ describe Game do
       expect(game.is_defending).to eq(serena)
     end
   end
+
+  describe "#lose?" do
+
+    it 'shows a loser' do
+      allow(max).to receive(:lose).and_return false
+      allow(serena).to receive(:lose).and_return true
+
+      expect(game.lose?).to eq serena
+    end
+  end
 end

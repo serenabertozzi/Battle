@@ -8,4 +8,10 @@ feature "Check points" do
     sign_in_and_play
     expect(page).to have_content("Max has 100 points")
   end
+
+  xscenario "checks for 0 points" do
+    sign_in_and_play
+    19.times { click_link ("Attack")}
+    expect(page).to have_content("Game over")
+  end
 end

@@ -21,4 +21,12 @@ class Game
       @is_defending = player_2
     end
   end
+
+  def lose?
+    if player_1.lose
+      player_1
+    elsif player_2.lose
+      player_2
+    end
+  end
 end
